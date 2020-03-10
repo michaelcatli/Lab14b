@@ -5,7 +5,7 @@
 
 import java.awt.*;
 import java.applet.*;
-
+import java.util.ArrayList;
 
 public class Lab14bv80 extends Applet
 {
@@ -23,4 +23,3 @@ public class Lab14bv80 extends Applet
       train.showCars(g);
 	}
 }
-
