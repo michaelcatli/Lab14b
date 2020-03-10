@@ -34,7 +34,14 @@ public class Train{
         break;
     }
 
+  public void addCar(int index, String carName, Color carColor){
+    int size = cars.size();
+    if (size > (index+1)){ //writing it this way will always assume there are cars to the right of the new placement so we don't have to make an if statement to check if there are cars to the right.. then we can make an elif and call on the other version of this method
+
+    }
   }
+
+
   public void showCars(Graphics g){
     for (RailCar railcar : cars) {
       railcar.drawCar(g);
