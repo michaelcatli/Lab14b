@@ -33,15 +33,38 @@ public class Train{
         cars.add(railc);
         break;
     }
-
+}
   public void addCar(int index, String carName, Color carColor){
     int size = cars.size();
     int largestindex = size - 1;
-    if (largestindex >= (index)){ //writing it this way will always assume there are cars to the right of the new placement so we don't have to make an if statement to check if there are cars to the right.. then we can make an elif and call on the other version of this method
+    if (largestindex >= (index)){ // move the cars in front first w/o adding or changing any indices
       for (int x = index; x<=largestindex; x++){
-        cars[x].//access attributes of the cars and everything and change the positions and all... then do the adding in array
+        cars.get(x).movexPosBy(175);
+      }
+      switch (carName){
+        case "Locomotive":
+          RailCar loco = new Locomotive(carColor,(xRefer + (150*(index)) + (25*index)),yPos);
+          cars.add(index,loco);
+          break;
+        case "Freight Car":
+          RailCar freight = new FreightCar(carColor,(xRefer + (150*index) + (25*index)),yPos);
+          cars.add(index,freight);
+          break;
+        case "PassengerCar":
+          RailCar passenger = new PassengerCar(carColor,(xRefer + (150*index) + (25*index)),yPos);
+          cars.add(index,passenger);
+          break;
+        case "Caboose":
+          RailCar caboose = new Caboose(carColor,(xRefer + (150*index) + (25*index)),yPos);
+          cars.add(index,caboose);
+          break;
+        default:
+          RailCar railc = new RailCar(carColor,(xRefer + (150*index) + (25*index)),yPos);
+          cars.add(index,railc);
+          break;
       }
     }
+
   }
 
 
