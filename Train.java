@@ -36,8 +36,11 @@ public class Train{
 
   public void addCar(int index, String carName, Color carColor){
     int size = cars.size();
-    if (size > (index+1)){ //writing it this way will always assume there are cars to the right of the new placement so we don't have to make an if statement to check if there are cars to the right.. then we can make an elif and call on the other version of this method
-
+    int largestindex = size - 1;
+    if (largestindex >= (index)){ //writing it this way will always assume there are cars to the right of the new placement so we don't have to make an if statement to check if there are cars to the right.. then we can make an elif and call on the other version of this method
+      for (int x = index; x<=largestindex; x++){
+        cars[x].//access attributes of the cars and everything and change the positions and all... then do the adding in array
+      }
     }
   }
 

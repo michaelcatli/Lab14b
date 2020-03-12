@@ -3,7 +3,7 @@
 // This is the provided testing file for the Lab14Bv80 assignment.
 
 
-import java.awt.*;
+/*import java.awt.*;
 import java.applet.*;
 import java.util.ArrayList;
 
@@ -22,4 +22,4 @@ public class Lab14bv80 extends Applet
       train.addCar("FreightCar",Color.green);
       train.showCars(g);
 	}
-}
+}*/
